@@ -17,6 +17,7 @@ You can specify custom PORT and other stuff by passing an options object. Each o
 
     bit.run({
       title: 'Bit Chest',
+      roomWord: 'File Set',
       port: 8888,
       uploadDir: path.resolve(\__dirname, '.temp'),
       maxFileSize: 1048576 // bytes

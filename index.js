@@ -25,6 +25,7 @@ exports.run = (opts) => {
   opts = opts || {}
   opts = Object.assign({
     title: 'Bit Chest',
+    roomWord: 'File Chest',
     port: 8888,
     uploadDir: path.join(__dirname, '.temp'),
     maxFileSize: 1048576

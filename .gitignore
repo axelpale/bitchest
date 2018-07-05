@@ -1,3 +1,6 @@
+# Default upload dir
+.temp
+
 # Simplify
 package-lock.json
 

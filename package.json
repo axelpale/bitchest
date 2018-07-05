@@ -1,7 +1,7 @@
 {
   "name": "bitchest",
   "version": "1.0.0",
-  "description": "Bit Chest. Simple anonymous and temporary file sharing service.",
+  "description": "Bit Chest. Simple anonymous and temporary file sharing app.",
   "main": "index.js",
   "scripts": {
     "start": "node example.js",
@@ -20,9 +20,13 @@
   },
   "homepage": "https://github.com/axelpale/bitchest#readme",
   "dependencies": {
+    "ejs": "^2.6.1",
     "express": "^4.16.3",
     "fs-extra": "^6.0.1",
-    "multer": "^1.3.1"
+    "http-status-codes": "^1.3.0",
+    "multer": "^1.3.1",
+    "random-lorem": "^1.0.4",
+    "uniqid": "^5.0.3"
   },
   "devDependencies": {
     "standard": "^11.0.1"

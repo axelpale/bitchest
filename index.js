@@ -1,8 +1,6 @@
 // Administration tools
 //
-const handlers = require('./lib/handlers')
-const roomIdMiddleware = require('./lib/roomIdMiddleware')
-const roomRouter = require('./lib/room/router')
+const rootRouter = require('./lib/router')
 
 const path = require('path')
 const http = require('http')
@@ -14,7 +12,8 @@ const fse = require('fs-extra')
 const optsMiddleware = (opts) => {
   // Way to pass options to handlers
   return (req, res, next) => {
-    req.bitchestOpts = opts
+    req.opts = opts
+    next()
   }
 }
 
@@ -25,6 +24,7 @@ exports.run = (opts) => {
 
   opts = opts || {}
   opts = Object.assign({
+    title: 'Bit Chest',
     port: 8888,
     uploadDir: path.join(__dirname, '.temp'),
     maxFileSize: 1048576
@@ -43,9 +43,7 @@ exports.run = (opts) => {
     // Routes
 
     app.use(express.static(opts.uploadDir))
-
-    app.get('/', optsMiddleware(opts), handlers.index)
-    app.use('/:room', roomIdMiddleware, optsMiddleware(opts), roomRouter)
+    app.use('/', optsMiddleware(opts), rootRouter)
 
     // Run
 

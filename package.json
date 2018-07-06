@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/axelpale/bitchest/issues"
   },
-  "homepage": "https://github.com/axelpale/bitchest#readme",
+  "homepage": "https://github.com/axelpale/bitchest",
   "dependencies": {
     "ejs": "^2.6.1",
     "express": "^4.16.3",

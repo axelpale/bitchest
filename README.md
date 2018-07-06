@@ -18,13 +18,20 @@ Bit Chest. Simple anonymous and temporary file sharing service.
 You can specify custom PORT and other stuff by passing an options object. Each option is optional and the default values are shown below:
 
     bit.run({
-      title: 'Bit Chest',
-      roomWord: 'File Chest',
+      title: 'File Chest',
+      roomWord: 'Chest',
       port: 8888,
-      uploadDir: path.resolve(\__dirname, '.temp'),
-      maxFileSize: 1048576 // bytes
+      uploadDir: path.join(\__dirname, '.temp'),
+      maxFileSize: 1048576, // bytes
+      poweredBy: true
     })
+
+## Tech
+
+- [Express.js](https://expressjs.com/)
+- [Multer](https://github.com/expressjs/multer)
+- [Bootstrap](https://getbootstrap.com/)
 
 ## Licence
 
-MIT
+[MIT](LICENSE)

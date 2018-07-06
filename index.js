@@ -29,6 +29,7 @@ exports.run = (opts) => {
     port: 8888,
     uploadDir: path.join(__dirname, '.temp'),
     maxFileSize: 1048576
+    poweredBy: true
   }, opts)
 
   // Setup

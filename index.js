@@ -44,6 +44,7 @@ exports.run = (opts) => {
     // Routes
 
     app.use(express.static(opts.uploadDir))
+    app.use('/static', express.static(path.join(__dirname, 'static')))
     app.use('/', optsMiddleware(opts), rootRouter)
 
     // Run

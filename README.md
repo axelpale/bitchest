@@ -2,11 +2,13 @@
 
 Bit Chest. Simple anonymous and temporary file sharing service.
 
+![](static/filechest.png)
+
 ## Install
 
     > npm install bitchest
 
-## Minimal bit chest app
+## Minimal bitchest app
 
     const bit = require('bitchest')
     bit.run()
@@ -17,7 +19,7 @@ You can specify custom PORT and other stuff by passing an options object. Each o
 
     bit.run({
       title: 'Bit Chest',
-      roomWord: 'File Set',
+      roomWord: 'File Chest',
       port: 8888,
       uploadDir: path.resolve(\__dirname, '.temp'),
       maxFileSize: 1048576 // bytes

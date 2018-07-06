@@ -1,3 +1,6 @@
 const bitchest = require('./index')
 
-bitchest.run()
+bitchest.run({
+  title: 'File Chest',
+  roomWord: 'Chest'
+})
